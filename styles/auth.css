@@ -67,7 +67,6 @@
 }
 
 .blue-circle {
-  background-color: rgb(183, 207, 245);
   left: 8rem;
   bottom: 8rem;
   background: linear-gradient(to bottom right, #60a5fa, #3b82f6);
