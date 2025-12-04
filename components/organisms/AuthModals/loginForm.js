@@ -1,4 +1,4 @@
-import { Spinner } from "/components/atoms/Spinner/spinner";
+import { Spinner } from "/components/atoms/Spinner/spinner.js";
 
 export class LoginForm {
   static render() {

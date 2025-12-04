@@ -1,3 +1,5 @@
+import { Spinner } from "/components/atoms/Spinner/spinner.js";
+
 export class SignupForm {
   static render() {
     const signupSpinner = new Spinner({
