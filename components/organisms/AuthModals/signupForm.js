@@ -107,10 +107,9 @@ export class SignupForm {
 
       const submitBtn = document.getElementById("signupSubmit");
       const btnText = submitBtn.querySelector(".btn-text");
-      const spinner = document.getElementById("signupSpinner");
 
       btnText.textContent = "Creating account...";
-      spinner.show("signupSpinner");
+      Spinner.show("signupSpinner");
       submitBtn.disabled = true;
 
       try {
@@ -119,7 +118,7 @@ export class SignupForm {
         this.showError("signupEmailError", error.message || "Signup failed");
       } finally {
         btnText.textContent = "Create Account";
-        spinner.hide("signupSpinner");
+        Spinner.hide("signupSpinner");
         submitBtn.disabled = false;
       }
     });

@@ -1,11 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Task Master</title>
+    <link rel="stylesheet" href="/styles/dashboard.css" />
+    <link rel="stylesheet" href="/styles/sidebar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside class="sidebar-container">
+        <div class="sidebar-top">
+          <div class="sidebar-header">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M21 10.656V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.344"
+              />
+              <path d="m9 11 3 3L22 4" />
+            </svg>
+            <h1>TaskMaster</h1>
+          </div>
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+
+        <div class="sidebar-container__profile"></div>
+
+        <nav class="sidebar-navigation"></nav>
+
+        <div class="sidebar-container__logout">
+          <button class="nav-btn nav-btn--logout">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-log-out-icon lucide-log-out"
+            >
+              <path d="m16 17 5-5-5-5" />
+              <path d="M21 12H9" />
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+            </svg>
+            <span>Logout</span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <div>
+          <h1 class="title">Good afternoon</h1>
+          <p class="main-content_desc">
+            Here's what's happening with your productivity today
+          </p>
+        </div>
+        <div class="stats-data"></div>
+        <div class="main-content__bottom">
+          <div class="main-content__recent">
+            <div class="main-content__recent_top">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="blue"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-clock4-icon lucide-clock-4"
+              >
+                <path d="M12 6v6l4 2" />
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+
+              <p>Recent Tasks</p>
+            </div>
+          </div>
+          <div class="quick-actions">
+            <div class="quick-actions__top">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-trending-up-icon lucide-trending-up"
+              >
+                <path d="M16 7h6v6" />
+                <path d="m22 7-8.5 8.5-5-5L2 17" />
+              </svg>
+
+              <h2 class="section-title">Quick Actions</h2>
+            </div>
+            <div class="actions-grid">
+              <div class="action-card" id="createTask">
+                <div class="action-icon action-task">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="blue"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-square-check-big h-5 w-5 text-blue-600"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M21 10.656V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.344"
+                    ></path>
+                    <path d="m9 11 3 3L22 4"></path>
+                  </svg>
+                </div>
+                <div class="action-card__bottom">
+                  <div class="action-title">Create New Task</div>
+                  <p class="action-description">Add a task to your list</p>
+                </div>
+              </div>
+
+              <div class="action-card" id="trackExpense">
+                <div class="action-icon action-expense">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-dollar-sign h-5 w-5 text-cyan-600"
+                    aria-hidden="true"
+                  >
+                    <line x1="12" x2="12" y1="2" y2="22"></line>
+                    <path
+                      d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                    ></path>
+                  </svg>
+                </div>
+
+                <div class="action-card__bottom">
+                  <div class="action-title">Track Expense</div>
+                  <p class="action-description">Record a new expense</p>
+                </div>
+              </div>
+              <div class="action-card" id="writeNote">
+                <div class="action-icon action-note">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-file-text h-5 w-5 text-green-600"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"
+                    ></path>
+                    <path d="M14 2v5a1 1 0 0 0 1 1h5"></path>
+                    <path d="M10 9H8"></path>
+                    <path d="M16 13H8"></path>
+                    <path d="M16 17H8"></path>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-square-check-big h-5 w-5 text-blue-600"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M21 10.656V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.344"
+                      ></path>
+                      <path d="m9 11 3 3L22 4"></path>
+                    </svg>
+                  </svg>
+                </div>
+
+                <div class="action-card__bottom">
+                  <div class="action-title">Write Note</div>
+                  <p class="action-description">Capture your thoughts</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="/scripts/sidebar.js" type="module"></script>
+
+    <script src="/scripts/dashboard.js" type="module"></script>
+  </body>
 </html>

@@ -1,9 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sidebar</title>
-  </head>
-  <body></body>
-</html>
+<link rel="stylesheet" href="/styles/sidebar.css" />
+
+<div class="sidebar-container">
+  <div class="sidebar-container__header">
+    <div class="sidebar-container__header--icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M21 10.656V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.344"
+        />
+        <path d="m9 11 3 3L22 4" />
+      </svg>
+      <h1>TaskMaster</h1>
+    </div>
+    <div class="sidebar-container__header--btn">
+      <button id="collapse-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <hr />
+</div>
+
+<script src="/scripts/dashboard/sidebar.js"></script>
