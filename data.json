@@ -1,0 +1,53 @@
+{
+  "menu": [
+    {
+      "label": "Dashboard",
+      "href": "#",
+      "icons": "/assets/images/dashboard.svg"
+    },
+    { "label": "Tasks", "href": "#", "icons": "/assets/images/task-icon.svg" },
+    {
+      "label": "Community",
+      "href": "#",
+      "icons": "/assets/images/people-icon.svg"
+    },
+    {
+      "label": "Expenses",
+      "href": "#",
+      "icons": "/assets/images/expense-icon.svg"
+    },
+    { "label": "Notes", "href": "#", "icons": "/assets/images/note.svg" },
+    { "label": "Settings", "href": "#", "icons": "/assets/images/setting.svg" }
+  ],
+
+  "stats": [
+    {
+      "label": "Active Tasks",
+      "icon": "/assets/images/welcome-mail.svg",
+      "value": "0",
+      "subText": "0 completed",
+      "background": "#2563EB"
+    },
+    {
+      "label": "Total Expenses",
+      "icon": "/assets/images/expense-icon.svg",
+      "value": "$0.00",
+      "subText": "This period",
+      "background": "#0891b2"
+    },
+    {
+      "label": "Total Notes",
+      "icon": "/assets/images/t-note.svg",
+      "value": "0",
+      "subText": "Saved notes",
+      "background": "#059669"
+    },
+    {
+      "label": "Completion Rate",
+      "icon": "/assets/images/completion.svg",
+      "value": "0%",
+      "subText": "Task completion",
+      "background": "#4F46E5"
+    }
+  ]
+}

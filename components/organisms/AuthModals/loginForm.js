@@ -45,7 +45,7 @@ export class LoginForm {
         </div>
        
         <div class="cta-btn">
-          <button class="btn btn-default btn-block" id="loginSubmit">
+          <button class="btn btn-default btn-block">
             <img src="/assets/images/help.svg" alt="Help Icon"/>
             <span class="btn-text">Help?</span>
           </button>
@@ -76,11 +76,12 @@ export class LoginForm {
 
       const submitBtn = document.getElementById("loginSubmit");
       const btnText = submitBtn.querySelector(".btn-text");
-      const spinner = document.getElementById("loginSpinner");
 
       btnText.textContent = "Logging in...";
-      spinner.show("loginSpinner");
+      Spinner.show("loginSpinner");
       submitBtn.disabled = true;
+
+      this.clearErrors();
 
       try {
         await onLoginSubmit({ email, password });
@@ -88,7 +89,7 @@ export class LoginForm {
         this.showError("loginEmailError", error.message || "Login failed");
       } finally {
         btnText.textContent = "Login";
-        spinner.hide("loginSpinner");
+        Spinner.hide("loginSpinner");
         submitBtn.disabled = false;
       }
     });
